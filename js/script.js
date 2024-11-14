@@ -6,6 +6,17 @@ const continue_btn = info_box.querySelector(".buttons .restart");
 const quiz_box = document.querySelector(".quiz_box");
 const result_box = document.querySelector(".result_box");
 const option_list = document.querySelector(".option_list");
+const express = require('express');
+const app = express();
+const port = 5000;
+
+app.get('/', (req, res) => {
+  res.send('Hello from script.js!');
+});
+
+app.listen(port, () => {
+  console.log(`App listening at http://localhost:${port}`);
+});
 
 
 // if startQuiz button clicked
